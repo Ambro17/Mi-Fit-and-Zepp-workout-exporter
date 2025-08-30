@@ -5,3 +5,6 @@
 /db_parameters.py
 /PostgreSQL.py
 /.ipynb_checkpoints/PostgreSQL-checkpoint.py
+.idea/
+.venv/
+.env

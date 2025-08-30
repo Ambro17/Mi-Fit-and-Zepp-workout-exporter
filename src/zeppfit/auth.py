@@ -4,7 +4,7 @@ from typing import Optional
 from furl import furl
 from install_playwright import install
 
-from src import constants
+from zeppfit import constants
 
 _logger = logging.getLogger(__name__)
 

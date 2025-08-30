@@ -1,5 +1,5 @@
 [project]
-name = "mi-fit-and-zepp-workout-exporter"
+name = "zeppfit"
 version = "0.1.0"
 description = "A Python script, which allows users to export workout data from Mi Fit and Zepp applications"
 readme = "README.md"
@@ -8,9 +8,12 @@ dependencies = [
     "furl>=2.1.4",
     "geopandas>=1.0.1",
     "gpxpy>=1.6.2",
+    "httpx>=0.28.1",
     "install-playwright>=0.1.0",
+    "marimo>=0.15.2",
     "playwright>=1.51.0",
     "pydantic>=2.10.6",
+    "python-dotenv>=1.1.1",
     "requests>=2.32.3",
 ]
 
@@ -19,3 +22,11 @@ dev = [
     "pyright>=1.1.397",
     "ruff>=0.11.2",
 ]
+
+[build-system]
+requires = ["uv_build>=0.8.14,<0.9.0"]
+build-backend = "uv_build"
+
+
+[tool.uv.sources]
+zeppfit = { path = "src" }

@@ -7,8 +7,8 @@ from typing import List
 import geopandas as gpd
 from shapely.geometry import Point
 
-from src.api import WorkoutSummary
-from src.exporters.base_exporter import BaseExporter, ExportablePoint
+from zeppfit.api import WorkoutSummary
+from zeppfit.exporters.base_exporter import BaseExporter, ExportablePoint
 
 LOGGER = logging.getLogger(__name__)
 

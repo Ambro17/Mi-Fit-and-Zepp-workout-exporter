@@ -3,8 +3,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import List
 
-from src.api import Api, WorkoutSummary
-from src.exporters.base_exporter import BaseExporter, parse_points
+from zeppfit.api import Api, WorkoutSummary
+from zeppfit.exporters.base_exporter import BaseExporter, parse_points
 
 LOGGER = logging.getLogger(__name__)
 

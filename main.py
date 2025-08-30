@@ -3,12 +3,12 @@ import logging
 from pathlib import Path
 from typing import List
 
-from src.api import Api
-from src.auth import get_app_token
-from src.exporters.base_exporter import BaseExporter
-from src.exporters.geopandas_exporter import GeoPandasExporter
-from src.exporters.gpx_exporter import GpxExporter
-from src.scraper import Scraper
+from zeppfit.api import Api
+from zeppfit.auth import get_app_token
+from zeppfit.exporters.base_exporter import BaseExporter
+from zeppfit.exporters.geopandas_exporter import GeoPandasExporter
+from zeppfit.exporters.gpx_exporter import GpxExporter
+from zeppfit.scraper import Scraper
 
 
 def get_exporters() -> List[BaseExporter]:

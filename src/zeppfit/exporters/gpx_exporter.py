@@ -4,8 +4,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import List, Optional
 
-from src.api import WorkoutSummary
-from src.exporters.base_exporter import BaseExporter, ExportablePoint
+from zeppfit.api import WorkoutSummary
+from zeppfit.exporters.base_exporter import BaseExporter, ExportablePoint
 
 LOGGER = logging.getLogger(__name__)
 
@@ -16,6 +16,7 @@ WORKOUT_TYPE_MAP = {
     9: "cycling",
     10: "indoor_cycling",
     16: "other",
+    # 22: "padel", # Probably wrong
     23: "indoor_rowing",
     92: "badminton",
 }
