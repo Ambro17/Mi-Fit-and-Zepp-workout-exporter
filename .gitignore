@@ -8,3 +8,6 @@
 .idea/
 .venv/
 .env
+__pycache__/
+__marimo__/
+summaries/

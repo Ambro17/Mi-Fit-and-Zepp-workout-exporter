@@ -186,24 +186,3 @@ class Api:
         )
         response.raise_for_status()
         return response.json()
-
-
-from datetime import datetime
-
-from httpx import AsyncClient
-
-
-async def get_weight_records(last_weigh_in_date: datetime, token: str, user_id: str) -> dict:
-    async with AsyncClient() as client:
-        resp = await client.get(
-            url=f"https://api-mifit.huami.com/users/{user_id}/members/-1/weightRecords",
-            headers={
-                "apptoken": token,
-                "appPlatform": "web",
-                "appname": "com.xiaomi.hm.health",
-            },
-            params={"fromTime": int(last_weigh_in_date.timestamp()) + 1},
-        )
-        resp.raise_for_status()
-
-    return resp.json()

@@ -5,12 +5,13 @@ description = "A Python script, which allows users to export workout data from M
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fit-tool>=0.9.13",
     "furl>=2.1.4",
     "geopandas>=1.0.1",
     "gpxpy>=1.6.2",
-    "httpx>=0.28.1",
     "install-playwright>=0.1.0",
     "marimo>=0.15.2",
+    "pandas>=2.2.3",
     "playwright>=1.51.0",
     "pydantic>=2.10.6",
     "python-dotenv>=1.1.1",

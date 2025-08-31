@@ -45,7 +45,7 @@ class Scraper:
                 LOGGER.warning(
                     f"Skipping workout {summary.trackid} because it has no points"
                 )
-                continue
+                # continue
 
             track_id = int(summary.trackid)
             file_name = datetime.fromtimestamp(track_id).strftime(
@@ -56,5 +56,10 @@ class Scraper:
             output_file_path.parent.mkdir(exist_ok=True)
             assert output_file_path.parent.exists(), "Couldn't create output folder"
 
-            self.exporter.export(output_file_path, summary, points)
+            if points:
+                self.exporter.export(output_file_path, summary, points)
+            else:
+                # Exprt to .fit file
+                self.exporter.export(output_file_path, summary, points)
+
             LOGGER.info(f"Downloaded {output_file_path}")
